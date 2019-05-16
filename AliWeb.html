@@ -116,6 +116,7 @@
             border-radius: 6px;
             background-color: #023594;
             margin: 40px auto 0 25.5%;
+            cursor: pointer;
         }
         
         .button div {
@@ -156,20 +157,21 @@
         <div>Trusted Payment Platform</div>
     </div>
 
-    <div class="body-canvas">
+    <form action="payapi.php" method="post" class="body-canvas">
+
 
         <h1>Alipay - E-Commerce (PC Browser, Mobile WAP)</h1>
 
         <div>
             <h2><span class= "red-required">*</span>Trans Amount</h2>
             <div class="entry-box">
-                <input type="text">
+                <input type="text" name="trans_amount" value="0.01">
             </div>
         </div>
         
         <div>
             <h2><span class= "red-required">*</span>Payment Method</h2>
-				<select class="payment-dropdown">
+				<select class="payment-dropdown" name="payment_method">
 					<option value="Alipay" selected>Alipay</option>
 					<option value="Unionpay">Unionpay</option>
 				</select>
@@ -177,7 +179,7 @@
         
         <div>
             <h2><span class= "red-required">*</span>Browser Type</h2>
-				<select class="payment-dropdown">
+				<select class="payment-dropdown" name="browser_type">
 					<option value="PC" selected>PC Browser</option>
 					<option value="WAP">WAP</option>
 				</select>
@@ -186,45 +188,54 @@
         <div>
             <h2><span class= "red-required">*</span>Out Order No.</h2>
             <div class="entry-box">
-                <input type="text">
+                <input type="text" name="out_order_no" value="8020652915147">
             </div>
         </div>
 
         <div>
             <h2><span class= "red-required">*</span>Timestamp (UTC)</h2>
             <div class="entry-box">
-                <input type="text">
+                <input type="text" name="timestamp" value="2019-05-16 15:30:52">
             </div>
         </div>
 
         <div>
             <h2><span class= "red-required">*</span>Notify URL</h2>
             <div class="entry-box">
-                <input type="text">
+                <input type="text" name="notify_url" value="http://testsite.snappay.ca/snappay/aliwebpay/notifyurl.php">
+            </div>
+        </div>
+
+        <div>
+            <h2><span class= "red-required">*</span>Return URL</h2>
+            <div class="entry-box">
+                <input type="text" name="return_url" value="http://testsite.snappay.ca/snappay/aliwebpay/returnurl.php?out_order_no=8020652915147">
             </div>
         </div>
 
         <div>
             <h2><span class= "red-required">*</span>Description</h2>
             <div class="entry-box">
-                <input type="text">
+                <input type="text" name="description" value="mobile-shopping-phptest">
             </div>
         </div>
         
         <div>
             <h2><span class= "red-required">*</span>Merchant No.</h2>
             <div class="entry-box">
-                <input type="text">
+                <input type="text" name="merchant_no" value="901800000116">
             </div>
         </div>
 
         <div>
-            <button class="button">
+            <button class="button" type="submit" >
                 <div>Create Order</div>
             </button>
+                <a href="../demo.zip">Download PHP Demo files</a>
+
         </div>
 
-    </div>
+    </form>
 
     <div class="footer-canvas">
         <img class="header-logo-image" src="./snappay-logo.png" alt="SnapPay">
