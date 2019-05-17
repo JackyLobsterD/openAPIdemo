@@ -203,7 +203,7 @@
         </div>
 
         <div>
-            <h2><span class= "red-required">*</span>Timestamp (UTC)</h2>
+            <h2><span class= "red-required">*</span>Timestamp (format: "YYYY-MM-DD hh-mm-ss" in UTC)</h2>
             <div class="entry-box">
                 <input type="text" name="timestamp" value="<?php echo $date ?>">
             </div>
@@ -212,14 +212,14 @@
         <div>
             <h2><span class= "red-required">*</span>Notify URL</h2>
             <div class="entry-box">
-                <input type="text" name="notify_url" value="http://<?php echo $hostname ?>/snappay/aliwebpay/notifyurl.php">
+                <input type="text" name="notify_url" value="http://<?php echo $hostname ?>/demo_1_0_1/aliweb/Aliweb-source.php">
             </div>
         </div>
 
         <div>
             <h2><span class= "red-required">*</span>Return URL</h2>
             <div class="entry-box">
-                <input type="text" name="return_url" value="http://<?php echo $hostname ?>/snappay/aliwebpay/returnurl.php?out_order_no=<?php echo $orderId ?>">
+                <input type="text" name="return_url" value="http://<?php echo $hostname ?>/demo_1_0_1/aliweb/returnurl.php?out_order_no=<?php echo $orderId ?>">
             </div>
         </div>
 
